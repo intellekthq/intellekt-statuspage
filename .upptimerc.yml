@@ -46,6 +46,29 @@ status-website:
     [class*="text-emerald-"] { color: #10b981 !important; }
     /* Down stays red */
     .status-down, [class*="text-red-"] { color: #dc2626 !important; }
+    /* The "All systems operational" banner hardcodes a green ✅ in
+       <article class="up">✅ All systems operational</article>.
+       Hide the original text and inject a brand-toned replacement. */
+    article.up {
+      position: relative;
+      color: transparent !important;
+      background-color: #ede9fe !important;
+      border-radius: 6px;
+    }
+    article.up::after {
+      content: "All systems operational";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6d28d9;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    article.down {
+      background-color: #fee2e2 !important;
+    }
 
 assignees:
   - mach-kernel
