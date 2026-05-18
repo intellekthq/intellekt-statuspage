@@ -36,11 +36,27 @@ status-website:
         --link-color: #7c3aed;
         --link-hover-color: #6d28d9;
       }
-      a { color: #7c3aed; }
-      a:hover { color: #6d28d9; }
-      .status-up, .text-green-500 { color: #16a34a; }
-      .status-down { color: #dc2626; }
-      .navbar a, header a { color: #7c3aed; }
+      /* Brand purple accent for links + nav */
+      a, .navbar a, header a { color: #7c3aed !important; }
+      a:hover, .navbar a:hover, header a:hover { color: #6d28d9 !important; }
+      /* Replace stock Tailwind green with cooler emerald-500
+         (#10b981) so the up/operational state pairs with violet
+         instead of clashing */
+      [class*="text-green-"], .status-up, .status-operational {
+        color: #10b981 !important;
+      }
+      [class*="bg-green-"] {
+        background-color: #10b981 !important;
+      }
+      [class*="bg-green-1"], [class*="bg-green-2"] {
+        background-color: #d1fae5 !important;
+      }
+      [class*="border-green-"] {
+        border-color: #10b981 !important;
+      }
+      [class*="text-emerald-"] { color: #10b981 !important; }
+      /* Down stays red */
+      .status-down, [class*="text-red-"] { color: #dc2626 !important; }
     </style>
 
 assignees:
