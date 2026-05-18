@@ -1,35 +1,35 @@
 owner: intellekthq
-repo: intellekt-statuspage
+repo: statuspage
 
 sites:
   - name: bustdown API
     url: https://bustdownapi.intellekt.fyi/health
-    icon: https://raw.githubusercontent.com/intellekthq/intellekt-statuspage/main/assets/bustdown.png
+    icon: https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/bustdown.png
     expectedStatusCodes: [200]
     method: GET
   - name: kmap API
     url: https://kmap.api.intellekt.fyi/health
-    icon: https://raw.githubusercontent.com/intellekthq/intellekt-statuspage/main/assets/kmap.png
+    icon: https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/kmap.png
     expectedStatusCodes: [200]
     method: GET
 
 status-website:
   cname: status.intellekt.fyi
   name: intellekt status
-  logoUrl: https://raw.githubusercontent.com/intellekthq/intellekt-statuspage/main/assets/logo.svg
+  logoUrl: https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/logo.svg
   introTitle: intellekt status
   introMessage: Real-time uptime for intellekt APIs. Probes run every 5 minutes from GitHub Actions.
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/intellekthq/intellekt-statuspage
+      href: https://github.com/intellekthq/statuspage
   # Light theming: favicon + brand accent (intellekt purple #7c3aed).
   # Upstream Upptime CSS uses utility classes; the rules below target
   # the documented anchor/badge surfaces. Tune after first deploy if needed.
   customHeaderHTML: |
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/intellekthq/intellekt-statuspage/main/assets/favicon.ico">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/intellekthq/intellekt-statuspage/main/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/apple-touch-icon.png">
     <style>
       :root {
         --primary-color: #7c3aed;

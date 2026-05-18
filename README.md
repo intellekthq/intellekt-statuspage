@@ -1,4 +1,4 @@
-# intellekt-statuspage
+# statuspage
 
 Public uptime monitoring for intellekt APIs at [`status.intellekt.fyi`](https://status.intellekt.fyi).
 
@@ -6,7 +6,7 @@ Forked from the [Upptime](https://upptime.js.org) template. Probes run as GitHub
 
 ## Add or remove a service
 
-Edit [`.upptimerc.yml`](./.upptimerc.yml) under `sites:`. Push to `master`. The `Setup CI` workflow regenerates the probe workflows and the new service is picked up on the next 5-min tick.
+Edit [`.upptimerc.yml`](./.upptimerc.yml) under `sites:`. Push to `main`. The `Setup CI` workflow regenerates the probe workflows and the new service is picked up on the next 5-min tick.
 
 ## Status, design, and operational notes
 

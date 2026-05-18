@@ -40,7 +40,7 @@ Light theming, no upstream fork.
 
 ## 4. Hosting
 
-- **Repo:** `intellekthq/intellekt-statuspage` (public). Public so customers can see incidents and so GitHub Actions minutes are free.
+- **Repo:** `intellekthq/statuspage` (public). Public so customers can see incidents and so GitHub Actions minutes are free.
 - **Static site:** built by Upptime's `site.yml`, deployed to `gh-pages` branch.
 - **Page:** GitHub Pages serves from `gh-pages` at custom domain `status.intellekt.fyi` (CNAME file written by Upptime from `.upptimerc.yml`'s `status-website.cname`).
 - **DNS:** CNAME `status.intellekt.fyi` → `intellekthq.github.io` at the `intellekt.fyi` registrar. Out-of-band; not managed by this repo.
@@ -49,7 +49,7 @@ Light theming, no upstream fork.
 ## 5. Operational notes
 
 - **PAT secret:** `GH_PAT` — fine-grained Personal Access Token scoped to this repo. Required by Upptime to commit history and open/close incident Issues. Scopes: `contents: write`, `issues: write`, `pages: write`, `workflows: write`, `actions: write`. Rotate annually.
-- **Edit cycle:** add/remove a service by editing `.upptimerc.yml` `sites:`, push to master. The `setup.yml` workflow regenerates `.github/workflows/*.yml` automatically; the `uptime.yml` cron picks up the new list on the next 5-min tick.
+- **Edit cycle:** add/remove a service by editing `.upptimerc.yml` `sites:`, push to `main`. The `setup.yml` workflow regenerates `.github/workflows/*.yml` automatically; the `uptime.yml` cron picks up the new list on the next 5-min tick.
 - **History repo growth:** ~288 commits/day total (5-min cron × 2 services). Manageable for years. No GC strategy needed at this volume.
 - **Probe sensitivity:** Upptime defaults — 1 failed probe = "down" badge. Tune via `assignees`, `maxResponseTime`, retry params if false positives surface.
 
