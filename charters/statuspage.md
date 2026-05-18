@@ -12,8 +12,8 @@
 
 | Service | URL probed | Check |
 |---|---|---|
-| bustdown API | `https://bustdownapi.intellekt.fyi/health` | HTTP 200, NestJS `/health` returns `{status:"ok"}` |
-| kmap API | `https://kmap.api.intellekt.fyi/health` | HTTP 200, NestJS `/health` returns `{status:"ok"}` |
+| bustdown API | `https://bustdownapi.intellekt.fyi/api/health` | HTTP 200, NestJS `/api/health` returns `{status:"ok"}` (apps set `setGlobalPrefix('api')`) |
+| kmap API | `https://kmap.api.intellekt.fyi/api/health` | HTTP 200, NestJS `/api/health` returns `{status:"ok"}` (apps set `setGlobalPrefix('api')`) |
 
 Excluded from V1 with reasoning:
 - `safely.api.intellekt.fyi` — pre-launch (TestFlight stage per safely charters); public red badges premature.

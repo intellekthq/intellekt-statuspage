@@ -3,12 +3,12 @@ repo: statuspage
 
 sites:
   - name: bustdown API
-    url: https://bustdownapi.intellekt.fyi/health
+    url: https://bustdownapi.intellekt.fyi/api/health
     icon: https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/bustdown.png
     expectedStatusCodes: [200]
     method: GET
   - name: kmap API
-    url: https://kmap.api.intellekt.fyi/health
+    url: https://kmap.api.intellekt.fyi/api/health
     icon: https://raw.githubusercontent.com/intellekthq/statuspage/main/assets/kmap.png
     expectedStatusCodes: [200]
     method: GET
