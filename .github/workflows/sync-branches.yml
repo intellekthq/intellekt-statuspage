@@ -1,0 +1,21 @@
+# Sync main -> master for Upptime status-page compatibility
+# Upptime's status-page hardcodes 'master' branch in its fetch URL.
+# This action mirrors main -> master so the status page shows current data.
+name: Sync main to master
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Sync main to master
+        run: |
+          git config user.name "Upptime Bot"
+          git config user.email "73812536+upptime-bot@users.noreply.github.com"
+          git push origin HEAD:master --force-with-lease
